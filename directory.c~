@@ -1,0 +1,12 @@
+#include <dirent.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+
+int main(){
+  DIR *directory = opendir('.');
+  printf("name: %s", directory->d_name);
+  printf("file type: %d", directory->d_type);
+
+  return 0;
+}
